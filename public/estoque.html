@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Gerenciamento de Produto</title>
+  </head>
+  <body>
+    <h1>Sistema de Gerenciamento de Estoque</h1>
+
+    <h2>Cadastrar Produto</h2>
+    <form action="/admin" method="POST" id="addForm">
+      Nome do Produto: <input type="text" id="nome" name="nome" /> Categoria do produto:
+      <select id="categoria" name="categoria">
+        <option value="classico">Clássico</option>
+        <option value="casual">Casual</option>
+        <option value="estilo-de-rua">Estilo de Rua</option>
+        <option value="esportivo">Esportivo</option>
+        <option value="grunge">Grunge</option>
+      </select>
+      Quantidade: <input type="text" id="qnt" name="qnt" />
+      <input type="submit" value="Adicionar" />
+    </form>
+
+    <h2>Lista de Produtos</h2>
+    <table id="estoque">
+      <thead>
+        <tr>
+          <th>Nome do Produto</th>
+          <th>Categoria do Produto</th>
+          <th>Quantidade</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Dados serão inseridos aqui -->
+      </tbody>
+    </table>
+
+    <script src="database.js"></script>
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </body>
+</html>
